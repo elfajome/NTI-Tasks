@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+}
+
+.container .header {
+    background-image: url(./download\ \(1\).jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem 5rem 0 10rem;
+    height: 70vh;
+}
+
+.container .header .head {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.container .header .left-header {
+    color: white;
+    width: 45%;
+    margin-right: 10rem;
+}
+
+.container .header .left-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.7rem;
+}
+
+.container .header .left-header h1 span {
+    color: #ff953e;
+}
+
+.container .header .left-header h4 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 1.3rem;
+}
+
+.container .header .left-header p {
+    color: #ddd;
+    margin-bottom: 5rem;
+}
+
+.container .header .left-header button {
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.container .header .right-header {
+    background-color: white;
+    padding: 2rem;
+    margin-top: 3rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 30%;
+    max-width: 500px;
+    text-align: right;
+    margin-left: 5rem;
+}
+
+.container .header .right-header h4 {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    opacity: 0.8;
+}
+
+.container .header .right-header h4 span {
+    color: #ff953e;
+}
+
+.container .header .right-header input,
+.container .header .right-header button {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0 0;
+    border: none;
+    outline: none;
+
+}
+
+.container .header .right-header button {
+    color: white;
+    background-color: #ff953e;
+    cursor: pointer;
+}
+
+.social-media {
+    padding: 0.9rem 5rem;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+.social-media .social-text {
+    width: 30%;
+    display: inline-block;
+}
+
+.social-media .social-text h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.3rem;
+}
+
+.social-media .social-text p {
+    font-size: 0.859rem;
+    color: #525252;
+}
+
+.social-media .link-media {
+    display: inline-block;
+    width: 60%;
+    text-align: end;
+    vertical-align: top;
+    padding-top: 1rem;
+}
+
+.social-media .link-media i {
+    font-size: 2rem;
+    margin-right: 2.5rem;
+    opacity: 0.8;
+}
+
+/* start section */
+
+.section {
+    width: 90%;
+    margin: auto;
+    padding: 5rem 0;
+}
+
+.section .image-sec {
+    width: 48%;
+    display: inline-block;
+}
+
+.section .image-sec img {
+    width: 30rem;
+    height: 25rem;
+    border: 1px solid rgb(37, 37, 37);
+}
+
+.section .text-sec {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.section .text-sec h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section .text-sec p {
+    color: #525252;
+}
+
+.section .title .icon {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-size: 2rem;
+    border: 1px solid #ff953e;
+    color: #ff953e;
+    padding: 10px;
+    border-radius: 5px;
+    vertical-align: top;
+}
+
+.section .title .text-title {
+    display: inline-block;
+    width: 80%;
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+
+.section .title .text-title h3 {
+    font-size: 2rem;
+}
+
+/* start awesome */
+.awesome {
+    background-color: #eee;
+    width: 100%;
+    padding: 5rem 15rem 2rem;
+    text-align: center;
+}
+
+.awesome h1 {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #ff953e;
+}
+
+.awesome p {
+    color: #525252;
+    margin-bottom: 2rem;
+}
+
+.awesome .icons .icon {
+    display: inline-block;
+    width: 25%;
+    padding: 1rem 2rem;
+}
+
+.awesome .icons .icon i {
+    color: #ff953e;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.awesome .icons .icon h3 {
+    margin-bottom: 1rem;
+}
+
+.awesome .icons .icon p {
+    font-size: .8rem;
+}
+
+/* customers */
+.customer {
+    width: 100%;
+    padding: 5rem 15rem 2rem;
+    text-align: center;
+}
+
+.customer h1 {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #ff953e;
+}
+
+.customer .p {
+    color: #525252;
+    margin-bottom: 2rem;
+}
+
+.customer .element {
+    display: inline-block;
+    text-align: left;
+    width: 25%;
+}
+
+.customer .element .text-ele {
+    font-size: 0.6rem;
+    margin-right: 6rem;
+    padding: 10px;
+    text-align: justify;
+    background-color: #eee;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    color: #888888;
+}
+
+.customer .element .img-ele img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.customer .element .img-ele .txt-ele {
+    display: inline-block;
+    margin-left: .5rem;
+}
+
+.customer .element .img-ele .txt-ele p {
+    font-size: .7rem;
+    color: #797979;
+}
