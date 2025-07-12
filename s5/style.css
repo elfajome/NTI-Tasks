@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding:0;
+}
+body {
+    font-family: sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+.w-100 {
+    width: 100%;
+}
+.h-100 {
+    height: 100%;
+}
+.p-m {
+    padding: 0.5rem;
+}
+.p-l {
+    padding: 1rem;
+}
+.p-xl {
+    padding: 1.5rem;
+}
+.p-xxl {
+    padding: 2rem;
+}
+.m-m {
+    margin: 0.5rem;
+}
+.m-l {
+    margin: 1rem;
+}
+.m-xl {
+    margin: 1.5rem;
+}
+.m-xxl {
+    margin: 2rem;
+}
+.flex {
+    display: flex;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+:root {
+    --color-white: white;
+    --color-black: black ;
+    --light-grey: #ddd;
+    --grey: #a0a0a0;
+    --main-colol:#2DA884;
+
+}
+/* start main page */
+.main-page {
+    height: 100vh;
+    background-image: url(./header.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* start navbar */
+.main-page nav {
+    position: fixed;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--main-colol);
+    background-color: var(--color-white);
+}
+.main-page nav .title {
+    font-size: 2rem;
+}
+.main-page nav ul {
+    width: 30%;
+    justify-content: space-around;
+    font-weight: bold;
+}
+.main-page nav .sign button {
+    border: none;
+    border-radius: 1rem;
+    padding: 0.6rem 1.2rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.main-page nav .sign button:first-child {
+    color: var(--main-colol) ;
+}
+.main-page .sign button:last-child {
+    background-color: var(--main-colol);
+    color: var(--color-white);
+}
+/* start header */
+.header {
+    color: var(--color-white);
+    flex-direction: column;
+    padding-top: 5rem;
+}
+.header .title {
+    text-align: center;
+    max-width: 60%;
+    font-size: 5.5rem;
+    letter-spacing: 8px;
+    margin-bottom: 1rem;
+}
+.header .prag {
+    color: var(--light-grey);
+    max-width: 45%;
+    text-align: center;
+}
+.header .links {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.header .links button {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    font-weight: bold;
+}
+.header .links button:first-child {
+    color: var(--color-white);
+    background-color: var(--main-colol);
+}
+.header .links button:last-child {
+    color: var(--main-colol);
+}
+.header .reviwes {
+    background-color: var(--color-white);
+    margin-top: 1.5rem;
+    border-radius: .5rem ;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.header .reviwes ul li {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: var(--color-black);
+    text-align: center;
+}
+.header .reviwes ul li:not(:last-child) {
+    border-right: 1px solid var(--grey);
+}
+.header .reviwes ul li h1 span {
+    color: var(--main-colol);
+    font-size: 1.5rem;
+}
+.header .reviwes ul li p {
+    font-size: .6rem;
+    font-weight: 700;
+    color: var(--grey);
+}
+/* start about us */
+.container {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container .about {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+.container .about .title{
+    width: 45%;
+    font-size: 2.5rem;
+}
+.container .about .title span {
+    color: var(--main-colol);
+}
+.container .about .prag {
+    color: var(--grey);
+    width: 38%;
+    font-size: .7rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+.container .about .mession {
+    gap: 10rem;
+}
+.container .about .mession .left .content {
+    max-width: 500px;
+    background-color: var(--color-white);
+    box-shadow: 0 0 15px var(--grey);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.container .about .mession .left .content i {
+    color: var(--main-colol);
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.container .about .mession .left .content h3 {
+    padding-bottom: 1rem;
+}
+.container .about .mession .left .content h3 span {
+    color: var(--main-colol);
+}
+.container .about .mession .left .content  p {
+    color: var(--grey);
+    font-size: .85rem;
+}
+.container .about .mession .right img {
+    max-width: 500px;
+    max-height: 400px;
+    box-shadow: 0 0 15px var(--grey);
+    border-radius: 10px;
+}
+/* start choose Us */
+.container .choose {
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    gap: 20rem;
+    justify-content: center;
+}
+.container .choose .img img {
+    max-width: 450px;
+    max-height: 350px;
+    box-shadow: 0 0 15px var(--grey);
+    border-radius: 10px;
+    margin-left: 5.5rem;
+}
+.container .choose .txt-choose {
+    margin-top: 1rem;
+}
+.container .choose .txt-choose h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.3rem;
+}
+.container .choose .txt-choose h1 span {
+    color: var(--main-colol) ;
+}
+.container .choose .txt-choose p {
+    font-size: .75rem;
+    color: var(--grey);
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+}
+.container .choose .txt-choose ul li {
+    padding-bottom: 1rem ;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-left: 2.2rem;
+    position: relative;
+}
+.container .choose .txt-choose ul li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: var(--main-colol);
+}
+/* start pricing */
+.pricing,
+.ecoSculpt,
+.article,
+.contact-us {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.pricing .title,
+.gallery .title,
+.ecoSculpt .title,
+.article .title,
+.contact-us .title {
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+.pricing .title span,
+.gallery .title span,
+.ecoSculpt .title span,
+.article .title span,
+.contact-us .title span {
+    color: var(--main-colol);
+}
+.pricing .prag,
+.gallery .prag,
+.ecoSculpt .prag,
+.article .prag,
+.contact-us .prag {
+    text-align: center;
+    margin: auto;
+    width: 30%;
+    color: var(--grey);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.pricing .category {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+}
+.pricing .category .Discount {
+    background-color: var(--color-white);
+    box-shadow: 0 0 10px var(--grey);
+    margin-top: 3rem;
+    width: 100%;
+    border-radius: 10px;
+}
+.pricing .category .div-1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--main-colol);
+    border-radius: 10px 10px 0 0;
+
+}
+.pricing .category .div-1 p {
+    color: var(--color-white);
+}
+.pricing .category .div-1 button {
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 20px;
+    color: var(--main-colol);
+    font-weight: bold;
+}
+.pricing .category .div-2 {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--main-colol);
+}
+.pricing .category .div-2 p {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--main-colol);
+}
+.pricing .category ul li {
+    color: var(--main-colol);
+    padding-bottom: 1rem;
+    margin: 1rem;
+    border-bottom: 1px solid var(--main-colol);
+}
+.pricing .category .btn {
+    margin: 1.5rem;
+    text-align: center;
+}
+.pricing .category .btn button {
+    padding: .9rem 2rem;
+    border: none;
+    background-color: var(--main-colol);
+    color: var(--color-white);
+    font-weight: bold;
+    border-radius: 30px;
+}
+/* start gallery */
+.gallery {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.gallery .section {
+    margin-top: 3rem;
+    justify-content: space-between;
+}
+.gallery .section .middle  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.gallery .section .middle .top {
+    display: flex;
+    justify-content: space-between;
+}
+.gallery .section img {
+    border-radius: 10px;
+}
+/* start about ecoSculpt */
+.ecoSculpt .reviews {
+    margin-top: 2rem;
+    gap: 5rem;
+}
+.ecoSculpt .reviews .review {
+    background-color: var(--color-white);
+    box-shadow: 0 0 10px var(--grey);
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+}
+.ecoSculpt .reviews .review .left{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -4rem;
+}
+.ecoSculpt .reviews .review .right {
+    margin-left: 2rem;
+} 
+.ecoSculpt .reviews .review .right p:first-child {
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+.ecoSculpt .reviews .review .right h3 {
+    margin-bottom: .3rem;
+    font-size: 1.4rem;
+}
+.ecoSculpt .reviews .review .right p {
+    font-size: 0.7rem;
+    color: var(--grey);
+    margin-bottom: .8rem;
+}
+.ecoSculpt .reviews .review .right i {
+    color: rgb(255, 153, 0);
+}
+.ecoSculpt .reviews .active {
+    background-color: var(--main-colol);
+    color: var(--color-white);
+}
+.ecoSculpt .reviews .active .right p:first-child,
+.ecoSculpt .reviews .active .right p {
+    color: var(--light-grey);
+}
+/* start article */
+.article .plogs {
+    margin-top: 2rem;
+    gap: 2.5rem;
+}
+.article .plogs .plog {
+    background-color: var(--color-white);
+    box-shadow: 0 0 13px var(--grey);
+}
+.article .plogs .plog img {
+    width: 100%;
+}
+.article .plogs .plog p{
+    color: var(--main-colol);
+    padding: 0.7rem;
+}
+.article .plogs .plog h2 {
+    padding: 0 0.7rem;
+}
+.article .plogs .plog .pra {
+    color: var(--grey);
+    font-size: 0.7rem ;
+    font-weight: 700;
+}
+.article .plogs .plog .btn {
+    text-align: center;
+    padding: 1rem;
+}
+.article .plogs .plog .btn button {
+    border: none;
+    padding: 1.2rem 3rem;
+    background-color: var(--main-colol);
+    color: var(--color-white);
+    font-weight: 700;
+    border-radius: 2rem;
+}
+.contact-us .contact {
+    background-color: var(--main-colol);
+    margin: 3rem 4rem 0;
+    border-radius: 1.5rem;
+}
+.contact-us .contact .left {
+    width: 50%;
+}
+.contact-us .contact .right {
+    background-color: var(--main-colol);
+    color: var(--color-white);
+    padding: 4rem 2rem;
+    width: 50%;
+}
+.contact-us .contact .right input {
+    width: 100% ;
+    border: 1px solid var(--color-white) ;
+    background-color: transparent;
+    padding: 1rem;
+    margin: 1.3rem 0;
+    border-radius: 3rem;
+}
+.contact-us .contact .right input::placeholder {
+    color: var(--color-white);
+}
+.contact-us .contact .right input[type="submit"] {
+    color: var(--main-colol);
+    font-size: large;
+    font-weight: 700;
+    background-color: var(--color-white);
+    margin-bottom: 0;
+}
+/* start footer */
+footer {
+    background-color: var(--main-colol);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    color: var(--color-white);
+}
+footer div {
+    width: 24%;
+}
+footer div:nth-child(2) {
+    text-align: center;
+}
+footer div h2 {
+    padding-bottom: 1rem;
+}
+footer div p {
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+footer div ul li {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+footer div:last-child ul {
+    display: flex;
+}
+footer div:last-child ul li {
+    font-size: 1.2rem;
+    padding: 0.3rem .4rem;
+    margin-left: .5rem;
+    border-radius: 0.5rem;
+    color: var(--main-colol);
+    background-color: var(--color-white);
+}
+
+
