@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.nav2 {
+    background-color: antiquewhite;
+}
+.color p {
+    width: 25px;
+    height: 25px;
+    margin-right: .7rem;
+    cursor: pointer;
+}
+.badge {
+    top: 20px;
+    right: 30px;
+}
