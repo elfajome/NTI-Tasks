@@ -22,11 +22,21 @@ https://2u.pw/Zql6r
 
 ---
 
-### 5 Session 6-1 Task Link
+### 5 Session 6-1 "home page" Task Link
 https://2u.pw/eSBSN
 
 ---
 
-### 6 Session 6-2 Task Link
+### 6 Session 6-2 "product page" Task Link
 https://2u.pw/Z4B3F
+
+---
+
+### 6 Session 7 "product page with bootstrap" Task Link
+https://2u.pw/Cuevv
+
+---
+
+
+
 
