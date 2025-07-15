@@ -32,7 +32,7 @@ https://2u.pw/Z4B3F
 
 ---
 
-### 6 Session 7 "product page with bootstrap" Task Link
+### 7 Session 7 "product page with bootstrap" Task Link
 https://2u.pw/Cuevv
 
 ---
