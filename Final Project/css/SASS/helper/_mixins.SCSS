@@ -1,0 +1,24 @@
+
+@use "./variables" as * ;
+
+// Media Queries
+
+@mixin TypeMedia($media) {
+    @if ( $media == "xsmall" ) {
+        @media (max-width: 575px) {
+            @content;
+        }
+    }@else if ($media == small ) {
+        @media (max-width: 991px) {
+            @content;
+        }
+    }@else if ($media == medium ) {
+        @media (min-width: 992px) and (max-width: 1199px) {
+            @content;
+        }
+    }@else if ($media == large ) {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}

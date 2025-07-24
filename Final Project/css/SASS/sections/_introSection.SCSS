@@ -1,0 +1,137 @@
+@use "./SASS/helper/variables" as *;
+@use "../css/SASS/helper/mixins" as *;
+
+.intro-section {
+    height: 550px;
+
+    .left-side {
+        position: relative;
+
+        .carousel {
+            .carousel-indicators {
+                button {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+
+            .carousel-item {
+                background-color: var(--i);
+
+                img {
+                    object-fit: contain;
+                    object-position: right top !important;
+                }
+
+                .carousel-caption {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 5%;
+                    width: 40%;
+
+                    @include TypeMedia(medium) {
+                        width: 50%;
+                    }
+
+                    @include TypeMedia(small) {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+
+    .banner-img {
+        overflow: hidden;
+
+        .banner-content {
+            top: 50%;
+            transform: translateY(-50%);
+            left: 5%;
+            z-index: 100;
+        }
+
+        .banner-hover {
+            overflow: hidden;
+            cursor: pointer;
+
+            img {
+                transition: 0.3s;
+            }
+
+            img:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    
+    @media (max-width: 767px) {
+        & {
+            height: auto;
+        }
+        .left-side {
+            height: 350px !important;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        & {
+            height: 550px !important;
+        }
+    }
+}
+
+
+.elementor-element {
+    div {
+        & {
+            @include TypeMedia(medium) {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            @include TypeMedia(small) {
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        div {
+            i {
+                color: $grey;
+                font-size: $fs-2;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            i {
+                color: $black;
+            }
+        }
+
+        div {
+            h4 {
+                @include TypeMedia(medium) {
+                    font-size: $fs-1-5;
+                    padding-top: 0.7rem;
+                }
+
+                @include TypeMedia(small) {
+                    font-size: $fs-07;
+                    font-weight: 600;
+                    padding-top: 0.6rem;
+                }
+            }
+
+            p {
+                font-size: $fs-085;
+
+                @include TypeMedia(small) {
+                    font-size: $fs-06;
+                }
+            }
+        }
+    }
+}

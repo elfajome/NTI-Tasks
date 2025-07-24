@@ -1,0 +1,141 @@
+@use "./SASS/helper/variables" as *;
+@use "../css/SASS/helper/mixins" as *;
+
+
+ul {
+    list-style-type: none;
+}
+
+.flash-deals {
+    .text-flash {
+        @include TypeMedia('xsmall') {
+            & {
+                justify-content: center !important;
+
+                .timerAndLink {
+                    justify-content: center !important;
+                }
+            }
+        }
+    }
+
+    .carousel-wrapper-container {
+        button {
+            padding: 1rem 0.3rem;
+            border: none;
+            background-color: $white;
+            box-shadow: 0 0 10px $grey-300;
+            transition: 0.5s;
+
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+
+            @include TypeMedia(small) {
+                & {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.carousel-wrapper {
+    &.carousel-wrapper1 {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .carousel-container {
+        width: 100%;
+
+        &.carousel-container-wrapper {
+            flex-wrap: nowrap !important;
+        }
+
+        .Card {
+            padding: 1rem;
+            height: fit-content;
+            background-color: $white;
+            border: 1px solid $grey-300;
+            transition: 0.5s ease-in-out;
+
+            &.card-wrapper {
+                scroll-snap-align: start;
+                flex-shrink: 0;
+                width: 19.96%;
+                @include TypeMedia("xsmall") {
+                    & {
+    
+                        a {
+                            font-size: $fs-05;
+                        }
+    
+                        width: 99.5% !important;
+                    }
+                }
+    
+                @include TypeMedia(small) {
+                    & {
+                        a {
+                            font-size: $fs-06;
+                        }
+    
+                        width: 49.95%;
+                    }
+                }
+    
+                @include TypeMedia(medium) {
+                    & {
+                        width: 33.33%;
+                    }
+                }
+            }
+
+            .hover-icons {
+                width:auto ;
+                animation: fadeIn 0.3s ease-in-out;
+            }
+
+
+            .discount {
+                font-size: $fs-06;
+                font-weight: 600;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            a {
+                font-size: .9rem;
+                text-decoration: none;
+                color: $black;
+            }
+
+            &:hover {
+                transform: scale(1.003);
+                box-shadow: 0 0 10px $grey-300;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

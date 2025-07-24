@@ -1,0 +1,69 @@
+@use "./SASS/helper/variables" as *;
+@use "../css/SASS/helper/mixins" as *;
+
+
+.contact-us {
+    .h-contact {
+        @include TypeMedia(large) {
+            font-size: 4.5rem;
+            font-weight: 600;
+            line-height: 50px;
+        }
+
+        @include TypeMedia(medium) {
+            font-size: 2.8rem;
+            font-weight: 600;
+            line-height: 25px;
+        }
+
+        @include TypeMedia(small) {
+            font-size: 2.3rem;
+            font-weight: 600;
+            line-height: 15px;
+        }
+    }
+
+    .contact-chat {
+        @include TypeMedia(large) {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div {
+            i {
+                font-size: 2rem;
+                padding-bottom: .6rem;
+            }
+
+            a:hover {
+                color: $red !important;
+            }
+        }
+    }
+
+    .send-message {
+        @include TypeMedia(small) {
+            h1 {
+                font-size: 1.2rem;
+            }
+        }
+
+        form {
+            padding: 1rem;
+
+            @include TypeMedia(large) {
+                width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            input,
+            textarea {
+                background-color: $main-bg;
+                border: none !important;
+                padding: .9rem !important;
+            }
+        }
+    }
+}

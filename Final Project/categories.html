@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Bootstrap And SASS</title>
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- A file that adjusts the size and other adjustments like other browsers, so there is no significant difference or Rander 
+        all elments normally -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--  Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- //////////////////////////// -->
+    <!-- Home Page -->
+    <!-- //////////////////////////// -->
+
+    <!-- navbar -->
+    <!-- Top black bar -->
+    <div class="top-bar text-white bg-dark py-1 d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex gap-3">
+                <div class="nav-item dropdown ps-5">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="./imgs/english.png" class="pe-2" alt="">English
+                    </a>
+                    <ul class="dropdown-menu bg-white shadow">
+                        <li><a class="dropdown-item" href="#"><img src="./imgs/espanol.png" class="pe-2" alt="">espanol</a></li>
+                        <li><a class="dropdown-item" href="#"><img src="./imgs/francais.png" class="pe-2" alt="">Francais</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><img src="./imgs/portugues.png" class="pe-2" alt="">Poertugues</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-item dropdown px-3">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        USD
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">EUR</a></li>
+                        <li><a class="dropdown-item" href="#">ERL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                Contact us 24/7 <strong>(+92) 3942 7879</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main navbar -->
+    <nav class="bg-white px-lg-5 px-md-3 px-3 top-0">
+        <div class="nav-content row m-0 justify-content-around align-items-center">
+            <div class="list-nav col-4 d-none"><i class="fa-solid fa-list"></i></div>
+            <div class="img-nav col-xl-2 col-lg-1 col-md-2 col-4">
+                <img src="./imgs/logo.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-2 contact-nav pt-3 d-flex align-items-center justify-content-center">
+                <div>
+                    <i class="fa-solid fa-phone pb-3 fs-4 pe-2"></i>
+                </div>
+                <div class="lh-0">
+                    <p class="pb-2 text-secondary">Contact Us 24/4</p>
+                    <p>(+92) 3942 7879</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-8 search-nav d-flex justify-content-center align-items-center"
+                style="height: 100px;">
+                <div class="d-flex bg-grey-light p-2 rounded nav-item dropdown">
+                    <a class="text-dark nav-link pe-3 ps-2 border-end pt-2 dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        All Categories
+                    </a>
+                    <ul class="dropdown-menu position-absolute">
+                        <li><a class="dropdown-item" href="#">Accessories</a></li>
+                        <li><a class="dropdown-item" href="#">Car Care</a></li>
+                        <li><a class="dropdown-item" href="#">Car Electronics</a></li>
+                        <li><a class="dropdown-item" href="#">Equipment</a></li>
+                        <li><a class="dropdown-item" href="#">Lights</a></li>
+                        <li><a class="dropdown-item" href="#">Oils & Fluids</a></li>
+                        <li><a class="dropdown-item" href="#">Tires</a></li>
+                        <li><a class="dropdown-item" href="#">Wheels</a></li>
+                        <li><a class="dropdown-item" href="#">Beauty & Health</a></li>
+                        <li><a class="dropdown-item" href="#">Bags & Cases</a></li>
+                        <li><a class="dropdown-item" href="#">BB Creams</a></li>
+                        <li><a class="dropdown-item" href="#">Body & Bath</a></li>
+                        <li><a class="dropdown-item" href="#">Brushes & Tools</a></li>
+                        <li><a class="dropdown-item" href="#">Hairs Care</a></li>
+                        <li><a class="dropdown-item" href="#">Lipstick</a></li>
+                        <li><a class="dropdown-item" href="#">Makeup</a></li>
+                        <li><a class="dropdown-item" href="#">Makeup Palettes</a></li>
+                        <li><a class="dropdown-item" href="#">Mascara</a></li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-contro border-0 l p-2 w-100 bg-transparent" type="search"
+                            placeholder="Search for products" aria-label="Search" />
+                        <button class="btn bg-dark text-white" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-2 col-4 user-nav d-flex justify-content-end align-items-center">
+                <div class="nav-item dropdown ps-5">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="./imgs/english.png" class="pe-2" alt="">English
+                    </a>
+                    <ul class="dropdown-menu bg-white shadow">
+                        <li><a class="dropdown-item" href="#"><img src="./imgs/espanol.png" class="pe-2" alt="">espanol</a></li>
+                        <li><a class="dropdown-item" href="#"><img src="./imgs/francais.png" class="pe-2" alt="">Francais</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><img src="./imgs/portugues.png" class="pe-2" alt="">Poertugues</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-item dropdown px-3">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        USD
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">EUR</a></li>
+                        <li><a class="dropdown-item" href="#">ERL</a></li>
+                    </ul>
+                </div>
+                <div class="px-3 acount-content-nav d-flex align-items-center">
+                    <i class="fa-solid fa-user pe-2"></i>
+                    <span class="acount-nav">Account</span>
+                </div>
+                <div class="position-relative pe-3">
+                    <i class="fa fa-heart"></i>
+                    <span class="position-absolute top-0  translate-middle badge rounded-pill bg-danger">1</span>
+                </div>
+                <div class="position-relative">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- start header -->
+
+    <header id="header" class="pt-3 border-bottom position-relative">
+        <ul class="d-flex flex-wrap">
+            <li class="px-3 border-end border-3" id="shop-category">
+                <a href="#" class="underline-none text-dark"><i class="fa-solid fa-list-ul p-2"></i>SHOP BY
+                    CATEGORIES</a>
+                <div id="overlay1" class="overlay1"></div>
+                <!-- Sidebar -->
+                <div id="sidebar1" class="sidebar1">
+                    <div class="w-100 py-3 px-4 bg-dark d-flex align-items-center justify-content-between text-white">
+                        <span>SHOP BY CATEGORIES </span>
+                        <button class="bg-transparent fs-4 text-white"><i class="fa-solid fa-xmark"
+                                id="closeSidebar1"></i></button>
+                    </div>
+                    <div class="sidebar-content">
+                        <ul class="p-0 m-0">
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center ">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="px-3" id="homepage">
+                <a href="#" class="underline-none text-dark">HomePages <i
+                        class="fa-solid fa-caret-down ps-2 py-2"></i></a>
+            </li>
+            <li class="px-3" id="categories">
+                <a href="#" class="underline-none text-danger">Categories <i
+                        class="fa-solid fa-caret-down ps-2 py-2"></i></a>
+            </li>
+            <li class="px-3" id="Products">
+                <a href="#" class="underline-none text-dark">Products <i
+                        class="fa-solid fa-caret-down ps-2 py-2"></i></a>
+            </li>
+            <li class="px-3" id="Pages">
+                <a href="#" class="underline-none text-dark">Pages <i class="fa-solid fa-caret-down ps-2"></i></a>
+            </li>
+            <li class="px-3">
+                <a href="#" class="underline-none text-dark">About Us</a>
+            </li>
+            <li class="px-3">
+                <a href="#" class="underline-none text-dark">Blogs</a>
+            </li>
+            <li class="px-3">
+                <a href="#" class="underline-none text-dark"><i class="fa-solid fa-tags pe-2"></i> Best discount</a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- start shop -->
+    <div class="mx-3 mb-5">
+        <div class="mx-lg-5 part-shop">
+            <p class="pt-3 text-secondary"><a href="#" class="text-dark underline-none pe-2">Home</a><span
+                    class="pe-2">></span>shop</p>
+            <h3 class="fw-bold ">Shop</h3>
+            <div class="d-flex flex-wrap justify-content-between  py-4">
+                <button class="btn px-4 mb-1">Autopart</button>
+                <button class="btn px-4 mb-1">Autopart</button>
+                <button class="btn px-4 mb-1">Autopart</button>
+                <button class="btn px-4 mb-1">Autopart</button>
+                <button class="btn px-4 mb-1">Autopart</button>
+                <button class="btn px-4 mb-1">Autopart</button>
+                <button class="btn px-4 mb-1">Autopart</button>
+                <button class="btn px-4 mb-1">Autopart</button>
+                <button class="btn px-4 mb-1">Autopart</button>
+            </div>
+        </div>
+
+        <!-- start show products -->
+        <div class="show-products w-100">
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
+                <div>
+                    <p class="fw-bold">color</p>
+                </div>
+                <div class="d-flex align-items-center pb-3">
+                    <div class="pe-3">
+                        <input type="checkbox" name="" id="show1">
+                        <label for="show1" class="ps-2">show only products on sale</label>
+                    </div>
+                    <div class="border-start border-end px-3 sale-catergory">
+                        <div class="dropdown">
+                            <button class="border-0 bg-transparent dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="text-secondary">Sale:</span> sort by latest
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">sort by popularity</a></li>
+                                <li><a class="dropdown-item" href="#">sort by popularity</a></li>
+                                <li><a class="dropdown-item" href="#">sort by popularity</a></li>
+                                <li><a class="dropdown-item" href="#">sort by popularity</a></li>
+                                <li><a class="dropdown-item" href="#">sort by popularity</a></li>
+                                <li><a class="dropdown-item" href="#">sort by popularity</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter-category">
+                        <i class="px-3 fa-solid fa-border-none"></i>
+                        <i class="fa-solid fa-list"></i>
+                    </div>
+                    <div class="filter-icon"><i class="fa-solid fa-sliders"></i> Filter</div>
+                </div>
+            </div>
+        </div>
+        <div class="category-products row p-0 mx-0 mb-5">
+            <div class="col-lg-3 col-md-3 col-sm-0 filter-products py-2 px-4">
+                <ul class="p-0">
+                    <li style="--i: black;" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: red;" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: blue;" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: yellow;" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(19, 168, 182);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(98, 128, 0) ;" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(235, 86, 86);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(43, 165, 125);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(230, 137, 24);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(251, 38, 187);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(117, 201, 91);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(0, 157, 255);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(4, 78, 66);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(194, 242, 3);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgba(118, 104, 104, 0.449);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(0, 8, 81);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(255, 131, 131);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                    <li style="--i: rgb(187, 128, 69);" class="d-flex py-2 justify-content-between">
+                        <div>Black</div>
+                        <div class="text-secondary">95</div>
+                    </li>
+                </ul>
+                <h4 class="pb-3">Brands</h4>
+                <div class="position-relative">
+                    <input type="text" class="w-100 rounded p-2 mb-3 border border-dark"
+                        placeholder="Search brands ...">
+                    <div class="position-absolute pt-1 pe-3 top-0 end-0">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <ul class="choose-category p-0">
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show2">
+                        <label for="show2" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show3">
+                        <label for="show3" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show4">
+                        <label for="show4" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show5">
+                        <label for="show5" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show6">
+                        <label for="show6" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show7">
+                        <label for="show7" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show8">
+                        <label for="show8" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show9">
+                        <label for="show9" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show10">
+                        <label for="show10" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show11">
+                        <label for="show11" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show12">
+                        <label for="show12" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show13">
+                        <label for="show13" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show14">
+                        <label for="show14" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show15">
+                        <label for="show15" class="ps-2">Amazon (8)</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show16">
+                        <label for="show16" class="ps-2">Amazon (8)</label>
+                    </li>
+                </ul>
+                <h6 class="pb-3 fw-bold">Price</h6>
+                <ul class="choose-category p-0">
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show17">
+                        <label for="show17" class="ps-2">0 - $100</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show18">
+                        <label for="show18" class="ps-2">$100 - $200</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show19">
+                        <label for="show19" class="ps-2">$200 - $500</label>
+                    </li>
+                    <li class="pb-2">
+                        <input type="checkbox" name="" id="show20">
+                        <label for="show20" class="ps-2">$1500+</label>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <input type="text" class="p-2 mx-2 w-25 rounded text-center" placeholder="Min">
+                    <p>-</p>
+                    <input type="text" class="p-2 mx-2 w-25 rounded text-center" placeholder="Max">
+                    <input type="submit" value="FILTER" class="w-25 mx-2 btn btn-dark rounded text-center">
+                </div>
+                <h6 class="py-3 fw-bold">Size</h6>
+                <ul class="size-category p-0">
+                    <li class="pb-2 d-flex justify-content-between">
+                        <div>
+                            <input type="checkbox" name="" id="show21">
+                            <label for="show21" class="ps-2">US 8</label>
+                        </div>
+                        <div class="text-secondary">(1)</div>
+                    </li>
+                    <li class="pb-2 d-flex justify-content-between">
+                        <div>
+                            <input type="checkbox" name="" id="show22">
+                            <label for="show22" class="ps-2">US 8</label>
+                        </div>
+                        <div class="text-secondary">(1)</div>
+                    </li>
+                    <li class="pb-2 d-flex justify-content-between">
+                        <div>
+                            <input type="checkbox" name="" id="show23">
+                            <label for="show23" class="ps-2">US 8</label>
+                        </div>
+                        <div class="text-secondary">(1)</div>
+                    </li>
+                    <li class="pb-2 d-flex justify-content-between">
+                        <div>
+                            <input type="checkbox" name="" id="show24">
+                            <label for="show24" class="ps-2">US 8</label>
+                        </div>
+                        <div class="text-secondary">(1)</div>
+                    </li>
+                    <li class="pb-2 d-flex justify-content-between">
+                        <div>
+                            <input type="checkbox" name="" id="show25">
+                            <label for="show25" class="ps-2">US 8</label>
+                        </div>
+                        <div class="text-secondary">(1)</div>
+                    </li>
+                    <li class="pb-2 d-flex justify-content-between">
+                        <div>
+                            <input type="checkbox" name="" id="show26">
+                            <label for="show26" class="ps-2">US 8</label>
+                        </div>
+                        <div class="text-secondary">(1)</div>
+                    </li>
+                    <li class="pb-2 d-flex justify-content-between">
+                        <div>
+                            <input type="checkbox" name="" id="show27">
+                            <label for="show27" class="ps-2">US 8</label>
+                        </div>
+                        <div class="text-secondary">(1)</div>
+                    </li>
+                    <li class="pb-2 d-flex justify-content-between">
+                        <div>
+                            <input type="checkbox" name="" id="show28">
+                            <label for="show28" class="ps-2">US 8</label>
+                        </div>
+                        <div class="text-secondary">(1)</div>
+                    </li>
+                    <li class="pb-2 d-flex justify-content-between">
+                        <div>
+                            <input type="checkbox" name="" id="show29">
+                            <label for="show29" class="ps-2">US 8</label>
+                        </div>
+                        <div class="text-secondary">(1)</div>
+                    </li>
+                </ul>
+                <h6 class="py-3 fw-bold">Storage Capacity</h6>
+                <ul class="size-category p-0">
+                    <li class="pb-2 d-flex justify-content-between">
+                        <div>
+                            <input type="checkbox" name="" id="show30">
+                            <label for="show30" class="ps-2">128 GB</label>
+                        </div>
+                        <div class="text-secondary">(1)</div>
+                    </li>
+                    <li class="pb-2 d-flex justify-content-between">
+                        <div>
+                            <input type="checkbox" name="" id="show31">
+                            <label for="show31" class="ps-2">64 GB</label>
+                        </div>
+                        <div class="text-secondary">(1)</div>
+                    </li>
+                </ul>
+                <h6 class="py-3 fw-bold">Customer Rating</h6>
+                <ul class="size-category p-0">
+                    <li class="pb-2 d-flex">
+                        <div>
+                            <input type="checkbox" name="" id="show32">
+                        </div>
+                        <div>
+                            <label for="show32" class="ps-2">
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                (25)
+                            </label>
+                        </div>
+                    </li>
+                    <li class="pb-2 d-flex">
+                        <div>
+                            <input type="checkbox" name="" id="show33">
+                        </div>
+                        <div>
+                            <label for="show33" class="ps-2">
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                (25)
+                            </label>
+                        </div>
+                    </li>
+                    <li class="pb-2 d-flex">
+                        <div>
+                            <input type="checkbox" name="" id="show34">
+                        </div>
+                        <div>
+                            <label for="show34" class="ps-2">
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                (25)
+                            </label>
+                        </div>
+                    </li>
+                    <li class="pb-2 d-flex">
+                        <div>
+                            <input type="checkbox" name="" id="show35">
+                        </div>
+                        <div>
+                            <label for="show35" class="ps-2">
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                <i class="text-dark fa-solid fa-star"></i>
+                                (25)
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 p-0 m-0 products-category">
+                <div class="carousel-wrapper d-flex p-0 m-0 align-items-center position-relative w-100 mb-5">
+                    <div class="carousel-container  d-flex flex-wrap p-0 m-0 " id="carousel">
+                        <div class="Card card-catergory position-relative">
+                            <div
+                                class="discount position-absolute py-2 px-3 top-0 left-0 m-2 mt-3 bg-danger text-white p-1 rounded">
+                                Hot
+                            </div>
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory position-relative">
+                            <div
+                                class="discount position-absolute py-2 px-3 top-0 left-0 m-2 mt-3 bg-danger text-white p-1 rounded">
+                                Hot
+                            </div>
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory position-relative">
+                            <div
+                                class="discount position-absolute py-2 px-3 top-0 left-0 m-2 mt-3 bg-danger text-white p-1 rounded">
+                                Hot
+                            </div>
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory position-relative">
+                            <div
+                                class="discount position-absolute py-2 px-3 top-0 left-0 m-2 mt-3 bg-danger text-white p-1 rounded">
+                                Hot
+                            </div>
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory position-relative">
+                            <div
+                                class="discount position-absolute py-2 px-3 top-0 left-0 m-2 mt-3 bg-success text-white p-1 rounded">
+                                New
+                            </div>
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory position-relative">
+                            <div
+                                class="discount position-absolute py-2 px-3 top-0 left-0 m-2 mt-3 bg-danger text-white p-1 rounded">
+                                Hot
+                            </div>
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory position-relative">
+                            <div
+                                class="discount position-absolute py-2 px-3 top-0 left-0 m-2 mt-3 bg-danger text-white p-1 rounded">
+                                Hot
+                            </div>
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-catergory">
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-outline-dark px-4" id="view-more">+ VIEW MORE</button>
+        </div>
+    </div>
+    <!-- start footer -->
+    <footer class="bg-dark text-white p-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div>
+                        <img src="./imgs/logo (1).png" class="mb-3" alt="">
+                        <p class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                            29 SE 2nd Ave, Miami Florida 33131, United States
+                        </p>
+                        <p class="text-secondary pb-2">
+                            <i class="fa-solid fa-envelope"></i>
+                            info@example.com
+                        </p>
+                        <h3 class="pb-3">(+92) 3942 7879</h3>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <ul>
+                        <li class="fw-bold pb-3">Shopping</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <ul>
+                        <li class="fw-bold pb-3">Shopping</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <h3 class="pb-4">Let's Keep in touch</h3>
+                    <input type="text" placeholder="Enter your email address"
+                        class="border bg-transparent w-100 rounded p-3 mb-4">
+                    <div class="d-flex">
+                        <i class="pe-3 fs-4 fa-brands fa-facebook-f"></i>
+                        <i class="pe-3 fs-4 fa-brands fa-facebook-messenger"></i>
+                        <i class="pe-3 fs-4 fa-brands fa-x-twitter"></i>
+                        <i class="pe-3 fs-4 fa-brands fa-instagram"></i>
+                        <i class="pe-3 fs-4 fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 my-3 p-4 border align-items-center justify-content-center">
+                <div class="col-lg-4 col-sm-12  pb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="pe-2"><i class="fs-5 fa-solid fa-phone-volume"></i></div>
+                        <div class="lh-1">
+                            <p>We'd Love to hear what you think!</p>
+                            <a href="#" class="text-white">Give Feedback</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 pb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="pe-2"><i class="fs-5 fa-solid fa-phone-volume"></i></div>
+                        <div class="lh-1">
+                            <p>We'd Love to hear what you think!</p>
+                            <a href="#" class="text-white">Give Feedback</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="d-flex align-items-center">
+                        <div class="pe-2"><i class="fs-5 fa-solid fa-phone-volume"></i></div>
+                        <div class="lh-1">
+                            <p>We'd Love to hear what you think!</p>
+                            <a href="#" class="text-white">Give Feedback</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright d-flex flex-wrap pt-4 justify-content-between">
+                <div class="text-secondary pb-2">
+                    Copyright © Merto. All Rights Reserved
+                </div>
+                <div class="payment">
+                    <img src="./imgs/payment-icons-1.png" alt="photo">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/categories.js"></script>
+    <script src="./js/cardProducts.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+// Well, we can retrieve all the SCSS files used on the page for you.
+@use "./SASS/helper/variables" as *;
+@use "../css/SASS/helper/mixins" as *;
+@use "./SASS/components/typography";
+
+@use "./SASS/sections/navbar";
+@use "./SASS/sections/introSection";
+@use "./SASS/sections/Wrapper";
+@use "./SASS/sections/carouselWrapper";
+@use "./SASS/sections/collection";
+@use "./SASS/sections/newArrival";
+@use "./SASS/sections/hoodies";
+@use "./SASS/sections/blog";
+@use "./SASS/sections/searchProducts";
+@use "./SASS/sections/footer";
+
+@use "./SASS/pages/categories";
+@use "./SASS/pages/hatCap";
+@use "./SASS/pages/contactUs";
+
+ul {
+    list-style-type: none;
+}

@@ -1,0 +1,237 @@
+@use "../helper/variables" as *;
+@use "../helper/mixins" as *;
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    font-size: 14px;
+
+    @media (max-width: 767px) {
+        display: none !important;
+    }
+
+    @media (min-width: 1200px) {
+        display: none !important;
+    }
+}
+
+.bg-grey-light {
+    background-color: #efefef;
+}
+
+.main-nav {
+    z-index: 9997 !important;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    &.hide-nav {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    &.show-nav {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-content {
+        .contact-nav {
+            &:hover {
+                cursor: pointer !important;
+                color: $red !important;
+            }
+        }
+        .search-nav{
+            .click-search-nav {
+                opacity: 0;
+                transition: opacity 0.3s ease, visibility 0.3s ease;
+                display: none;
+                ul {
+                    button:hover {
+                        border: 1px solid $red !important;
+                    }
+                }
+                &.show {
+                    display: block;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .img-nav {
+            img {
+                width: 130px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            justify-content: space-between !important;
+
+            .contact-nav {
+                display: none !important;
+            }
+
+            .user-nav {
+                .nav-item {
+                    display: none;
+                }
+
+                .acount-nav {
+                    display: none;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            padding: 1rem 0 !important;
+            justify-content: space-between !important;
+
+            .list-nav {
+                display: flex !important;
+            }
+
+            .img-nav {
+                text-align: center;
+
+                img {
+                    width: 120px;
+                }
+            }
+
+            .search-nav {
+                display: none !important;
+            }
+
+            .contact-nav {
+                display: none !important;
+            }
+
+            .user-nav {
+                .nav-item {
+                    display: none !important;
+                }
+
+                .acount-content-nav {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    .badge {
+        font-size: 8px;
+        padding: 3px 5px;
+    }
+}
+
+.sidebar-with-navbar {
+    width: 280px;
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease; 
+    z-index: 9999 !important;
+    &.show {
+        transform: translateX(0);
+    }
+}
+
+.overlay-search-nav,
+.overlay-sidebar-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    display: none;
+    z-index: 9998 !important;
+    transition: opacity 0.3s ease; 
+    &.show {
+        display: block ;
+        opacity: 1;
+    }
+}
+
+header {
+    z-index: 2000 !important;
+
+    .sidebar1 {
+        // padding-top: 4.5rem;
+        position: fixed !important;
+        top: 6rem;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+        transition: left 0.3s ease;
+        z-index: 1050;
+
+        &.activee {
+            left: 0;
+        }
+    }
+
+    .overlay1 {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        z-index: 1040;
+
+        &.activee {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    ul {
+        li:hover {
+            a {
+                transition: 0.62s;
+                color: $red !important;
+            }
+        }
+    }
+
+    & {
+        @include TypeMedia(small) {
+            display: none;
+        }
+    }
+}
+
+.home-imgs {
+    div {
+        box-shadow: 0 0 10px grey;
+    }
+}
+
+
+.home-imgs,
+.categories,
+.Products,
+.Pages {
+    width: 90%;
+    top: 75%;
+    left: 0;
+    z-index: 1000;
+
+    li {
+        a:hover {
+            color: $red !important;
+        }
+    }
+}
+
+.Products {
+    left: 30%;
+}

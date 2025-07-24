@@ -1,0 +1,182 @@
+
+@use "./SASS/helper/variables" as *;
+@use "../css/SASS/helper/mixins" as *;
+
+.part-shop {
+    div {
+        button {
+            background-color: $main-bg;
+
+            &:hover {
+                border: 1px solid $black;
+                background-color: $white;
+            }
+        }
+    }
+}
+
+.show-products {
+    div {
+        div {
+            cursor: pointer;
+        }
+    }
+
+    .filter-category {
+        @include TypeMedia(medium) {
+            display: none;
+        }
+
+        @include TypeMedia(small) {
+            display: none;
+        }
+    }
+
+    .sale-catergory {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    .filter-icon {
+        display: none;
+
+        @media (max-width: 767px) {
+            display: block;
+            background-color: $main-bg;
+            padding: 0.5rem 1rem;
+            border-radius: .7rem;
+
+            :hover {
+                background-color: $black;
+                color: $white;
+            }
+        }
+    }
+}
+
+.category-products {
+    .filter-products {
+        @media (max-width:767px) {
+            display: none;
+        }
+
+        ul:first-child {
+            li {
+                position: relative;
+                padding-left: 30px;
+            }
+
+            li::before {
+                content: "";
+                position: absolute;
+                top: 11px;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                border-radius: 3px;
+                background-color: var(--i);
+            }
+        }
+
+        .choose-category {
+            max-height: 200px;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: $grey-light;
+                border-radius: 15px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $black;
+                border-radius: 10px;
+            }
+
+            li:hover {
+                color: $red ;
+
+                input {
+                    position: relative;
+
+                    &::after {
+                        content: "\2713";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: $white;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 5px;
+                        background-color: $black;
+                    }
+                }
+            }
+        }
+
+        .size-category {
+            li:hover {
+                color: $red ;
+                cursor: pointer;
+
+                input {
+                    position: relative;
+
+                    &::after {
+                        content: "\2713";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: $white;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 5px;
+                        background-color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.products-category {
+    @media (max-width: 375px) {
+        padding-left: 1.5rem;
+    }
+
+    .card-catergory {
+        @include TypeMedia(large) {
+            width: 25%;
+        }
+
+        @include TypeMedia(medium) {
+            width: 33.333%;
+        }
+
+        @include TypeMedia(small) {
+            width: 33.333%;
+        }
+
+        @include TypeMedia("xsmall") {
+            width: 50%;
+        }
+
+        @media (max-width: 767px) {
+            max-width: 250px;
+        }
+
+        @media (max-width: 375px) {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+
+@use "../helper/variables" as * ;
+@use "../helper/mixins" as * ;
+
+
+.underline-none {
+    text-decoration: none;
+}
+.lh-0 {
+    line-height: 0;
+}
+.lh-1 {
+    line-height: 1;
+}
+
+.fs-04 {
+    font-size: 0.4rem;
+}
+.fs-05 {
+    font-size: 0.5rem;
+}
+.fs-06 {
+    font-size: 0.6rem;
+}
+.fs-07 {
+    font-size: 0.7rem;
+}
+.fs-08 {
+    font-size: 0.8rem;
+}
+.fs-09 {
+    font-size: 0.9rem;
+}
+.Fs-1 {
+    font-size: 1rem;
+}
+.fs-1-5 {
+    font-size: 1.5rem;
+}
+

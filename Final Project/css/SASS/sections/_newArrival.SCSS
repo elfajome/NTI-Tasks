@@ -1,0 +1,84 @@
+
+@use "./SASS/helper/variables" as *;
+@use "../css/SASS/helper/mixins" as *;
+.New-arrivals {
+    .header-arrival {
+        @include TypeMedia(small) {
+            & {
+                justify-content: center !important;
+            }
+        }
+
+        .link-arrival {
+            @include TypeMedia(small) {
+                ul {
+                    text-align: center;
+                    li {
+                        font-size: 0.65rem;
+                    }
+                }
+                div:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .arrivalProducts {
+        .product {
+            min-height: 240px;
+            overflow: hidden;
+            background-color: $white;
+            .Add-card {
+                z-index: -5;
+                bottom: 0rem;
+                position: absolute;
+            }
+
+            &:hover {
+                align-items: start !important;
+                overflow: visible;
+                box-shadow: 0 0 10px $grey-300;
+                border-radius: 5px;
+                z-index: 100;
+                .txt-arrival {
+                    padding-top: 1rem;
+                }
+            }
+
+            div {
+                width: 180px;
+
+                @include TypeMedia(small) {
+                    width: 130px;
+                }
+            }
+            @include TypeMedia(small) {
+                align-items: start !important;
+                .txt-arrival {
+                    padding-top: 1rem;
+                }
+                .Add-card {
+                    z-index: auto;
+                    button {
+                        font-size: 0.65rem !important;
+                    }
+                }
+            }
+
+            @include TypeMedia(medium) {
+                align-items: start !important;
+                .txt-arrival {
+                    padding-top: 1rem;
+                }
+                .Add-card {
+                    z-index: auto;
+                    button {
+                        font-size: 0.7rem !important;
+                    }
+                }
+            }
+        }
+
+    }
+}

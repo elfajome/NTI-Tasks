@@ -1,0 +1,30 @@
+@use "./SASS/helper/variables" as *;
+@use "../css/SASS/helper/mixins" as *;
+
+
+footer {
+    .container {
+        div {
+            div {
+                img {
+                    width: 120px;
+                }
+            }
+        }
+        .copyright {
+            .payment {
+                img {
+                    width: 300px;
+                }
+            }
+            @include TypeMedia(small) {
+                justify-content: center !important;
+                .payment {
+                    img {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}

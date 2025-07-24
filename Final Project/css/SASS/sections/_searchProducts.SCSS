@@ -1,0 +1,27 @@
+@use "./SASS/helper/variables" as *;
+@use "../css/SASS/helper/mixins" as *;
+
+
+.search-product {
+    background-color: $main-bg;
+    min-height: 300px;
+    flex-direction: column;
+    .input-search {
+        width: 70%;
+        @include TypeMedia(large) {
+            width: 50%;
+            ul {
+                width: 50%;
+            }
+        }
+        ul {
+            width: 70%;
+        }
+        padding: 0.1rem;
+        input {
+            padding: .9rem ;
+            width: 95%;
+            border: none;
+        }
+    }
+}

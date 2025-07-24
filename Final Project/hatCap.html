@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Bootstrap And SASS</title>
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- A file that adjusts the size and other adjustments like other browsers, so there is no significant difference or Rander 
+        all elments normally -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--  Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Home Page -->
+    <div class="cart shadow w-100 d-flex p-0 m-0 position-fixed bottom-0 bg-white p-2">
+        <div class="w-25 ms-3 d-flex justify-content-center rounded" style="background-color: #e6e6e6;">
+            <button class="btn">-</button>
+            <input type="text" placeholder="1" class="w-50 text-center btn">
+            <button class="btn">+</button>
+        </div>
+        <div class="w-50 mx-2">
+            <button class="w-100 btn btn-dark py-2 text-center">+ ADD TO CART</button>
+        </div>
+        <div class="w-25 me-3">
+            <button class="w-100 py-2 btn bg-danger text-white">BUY NOW</button>
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <!-- Top black bar -->
+    <div class="top-bar text-white bg-dark py-1 d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex gap-3">
+                <div class="nav-item dropdown ps-5">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="./imgs/english.png" class="pe-2" alt="">English
+                    </a>
+                    <ul class="dropdown-menu bg-white shadow">
+                        <li><a class="dropdown-item" href="#"><img src="./imgs/espanol.png" class="pe-2" alt="">espanol</a></li>
+                        <li><a class="dropdown-item" href="#"><img src="./imgs/francais.png" class="pe-2" alt="">Francais</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><img src="./imgs/portugues.png" class="pe-2" alt="">Poertugues</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-item dropdown px-3">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        USD
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">EUR</a></li>
+                        <li><a class="dropdown-item" href="#">ERL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                Contact us 24/7 <strong>(+92) 3942 7879</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main navbar -->
+    <nav class="bg-white px-lg-5 px-md-3 px-3 top-0">
+        <div class="nav-content row m-0 justify-content-around align-items-center">
+            <div class="list-nav col-4 d-none"><i class="fa-solid fa-list"></i></div>
+            <div class="img-nav col-xl-2 col-lg-1 col-md-2 col-4">
+                <img src="./imgs/logo.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-2 contact-nav pt-3 d-flex align-items-center justify-content-center">
+                <div>
+                    <i class="fa-solid fa-phone pb-3 fs-4 pe-2"></i>
+                </div>
+                <div class="lh-0">
+                    <p class="pb-2 text-secondary">Contact Us 24/4</p>
+                    <p>(+92) 3942 7879</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-8 search-nav d-flex justify-content-center align-items-center"
+                style="height: 100px;">
+                <div class="d-flex bg-grey-light p-2 rounded nav-item dropdown">
+                    <a class="text-dark nav-link pe-3 ps-2 border-end pt-2 dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        All Categories
+                    </a>
+                    <ul class="dropdown-menu position-absolute">
+                        <li><a class="dropdown-item" href="#">Accessories</a></li>
+                        <li><a class="dropdown-item" href="#">Car Care</a></li>
+                        <li><a class="dropdown-item" href="#">Car Electronics</a></li>
+                        <li><a class="dropdown-item" href="#">Equipment</a></li>
+                        <li><a class="dropdown-item" href="#">Lights</a></li>
+                        <li><a class="dropdown-item" href="#">Oils & Fluids</a></li>
+                        <li><a class="dropdown-item" href="#">Tires</a></li>
+                        <li><a class="dropdown-item" href="#">Wheels</a></li>
+                        <li><a class="dropdown-item" href="#">Beauty & Health</a></li>
+                        <li><a class="dropdown-item" href="#">Bags & Cases</a></li>
+                        <li><a class="dropdown-item" href="#">BB Creams</a></li>
+                        <li><a class="dropdown-item" href="#">Body & Bath</a></li>
+                        <li><a class="dropdown-item" href="#">Brushes & Tools</a></li>
+                        <li><a class="dropdown-item" href="#">Hairs Care</a></li>
+                        <li><a class="dropdown-item" href="#">Lipstick</a></li>
+                        <li><a class="dropdown-item" href="#">Makeup</a></li>
+                        <li><a class="dropdown-item" href="#">Makeup Palettes</a></li>
+                        <li><a class="dropdown-item" href="#">Mascara</a></li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-contro border-0 l p-2 w-100 bg-transparent" type="search"
+                            placeholder="Search for products" aria-label="Search" />
+                        <button class="btn bg-dark text-white" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-2 col-4 user-nav d-flex justify-content-end align-items-center">
+                <div class="nav-item dropdown ps-5">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="./imgs/english.png" class="pe-2" alt="">English
+                    </a>
+                    <ul class="dropdown-menu bg-white shadow">
+                        <li><a class="dropdown-item" href="#"><img src="./imgs/espanol.png" class="pe-2" alt="">espanol</a></li>
+                        <li><a class="dropdown-item" href="#"><img src="./imgs/francais.png" class="pe-2" alt="">Francais</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><img src="./imgs/portugues.png" class="pe-2" alt="">Poertugues</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-item dropdown px-3">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        USD
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">EUR</a></li>
+                        <li><a class="dropdown-item" href="#">ERL</a></li>
+                    </ul>
+                </div>
+                <div class="px-3 acount-content-nav d-flex align-items-center">
+                    <i class="fa-solid fa-user pe-2"></i>
+                    <span class="acount-nav">Account</span>
+                </div>
+                <div class="position-relative pe-3">
+                    <i class="fa fa-heart"></i>
+                    <span class="position-absolute top-0  translate-middle badge rounded-pill bg-danger">1</span>
+                </div>
+                <div class="position-relative">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- start header -->
+
+    <header id="header" class="pt-3 border-bottom position-relative">
+        <ul class="d-flex flex-wrap">
+            <li class="px-3 border-end border-3" id="shop-category">
+                <a href="#" class="underline-none text-dark"><i class="fa-solid fa-list-ul p-2"></i>SHOP BY
+                    CATEGORIES</a>
+                <div id="overlay1" class="overlay1"></div>
+                <!-- Sidebar -->
+                <div id="sidebar1" class="sidebar1">
+                    <div class="w-100 py-3 px-4 bg-dark d-flex align-items-center justify-content-between text-white">
+                        <span>SHOP BY CATEGORIES </span>
+                        <button class="bg-transparent fs-4 text-white"><i class="fa-solid fa-xmark"
+                                id="closeSidebar1"></i></button>
+                    </div>
+                    <div class="sidebar-content">
+                        <ul class="p-0 m-0">
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center border-bottom border-2">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                            <li class="px-3 d-flex justify-content-between align-items-center ">
+                                <div class="d-flex pt-3">
+                                    <img src="./imgs/icon-menu-1.png" class="" style="width: 25px; height: 25px;"
+                                        alt="">
+                                    <p class="ps-2">Fashion</p>
+                                </div>
+                                <div class="pt-0">
+                                    <button class="btn text-secondary">></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="px-3" id="homepage">
+                <a href="#" class="underline-none text-dark">HomePages <i
+                        class="fa-solid fa-caret-down ps-2 py-2"></i></a>
+            </li>
+            <li class="px-3" id="categories">
+                <a href="#" class="underline-none text-dark">Categories <i
+                        class="fa-solid fa-caret-down ps-2 py-2"></i></a>
+            </li>
+            <li class="px-3" id="Products">
+                <a href="#" class="underline-none text-dark">Products <i
+                        class="fa-solid fa-caret-down ps-2 py-2"></i></a>
+            </li>
+            <li class="px-3" id="Pages">
+                <a href="#" class="underline-none text-dark">Pages <i class="fa-solid fa-caret-down ps-2"></i></a>
+            </li>
+            <li class="px-3">
+                <a href="#" class="underline-none text-dark">About Us</a>
+            </li>
+            <li class="px-3">
+                <a href="#" class="underline-none text-dark">Blogs</a>
+            </li>
+            <li class="px-3">
+                <a href="#" class="underline-none text-dark"><i class="fa-solid fa-tags pe-2"></i> Best discount</a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- second header -->
+    <div class="d-flex flex-wrap mx-lg-5 py-3">
+        <a href="#" class="text-dark underline-none ps-3">Home<span class="ps-3">></span></a>
+        <a href="#" class="text-dark underline-none ps-3">Shop<span class="ps-3">></span></a>
+        <a href="#" class="text-dark underline-none ps-3">Fashion<span>></span></a>
+        <a href="#" class="text-secondary underline-none ps-3">Women<span class="ps-3">></span></a>
+        <a href="#" class="text-secondary underline-none ps-3">Shorts<span class="ps-3">></span></a>
+        <a href="#" class="text-secondary underline-none ps-3">Barbie Baseball Hat Cap berkshire Fashions New</a>
+    </div>
+
+    <!-- start details Products -->
+    <div class="detailsProducts mx-2 mb-5">
+        <div class="row p-0 m-0">
+            <div class="col-lg-7">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+                        <ul>
+                            <li class="mb-2 change-zoom-imge">
+                                <img src="./imgs/fashion-8-300x300.jpg" class="border border-dark rounded img-fluid"
+                                    alt="">
+                            </li>
+                            <li class="mb-2 change-zoom-imge">
+                                <img src="./imgs/fashion-9-300x300.jpg" class="border rounded img-fluid" alt="">
+                            </li>
+                            <li class="mb-2 change-zoom-imge">
+                                <img src="./imgs/fashion-10-300x300.jpg" class="border rounded img-fluid" alt="">
+                            </li>
+                            <li class="change-zoom-imge">
+                                <img src="./imgs/fashion-11-300x300.jpg" class="border rounded img-fluid" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-9 border rounded position-relative">
+                        <div class="image-zoom-container position-relative">
+                            <img src="./imgs/fashion-8-300x300.jpg" class="image-zoom" alt="">
+                        </div>
+                        <button class="fullscreen-btn border-0 rounded position-absolute top-0 end-0 m-3 py-2 px-3">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 zara-shop px-4">
+                <div>
+                    <p class="text-secondary">Zara</p>
+                    <h2>Barbie Baseball Hat Cap Berkshire Fashions New</h2>
+                    <div class="d-flex flex-wrap pb-3 align-items-center">
+                        <div class="d-flex">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="ps-3 text-secondary">(0 Reviews)</div>
+                        <div class="ps-3">
+                            <a href="#" class="text-secondary">Write a review</a>
+                        </div>
+                    </div>
+                    <div class="pb-2">
+                        <p class="lh-1"><i class="fa-solid fa-check text-success pe-1"></i> Uniqe Design</p>
+                        <p class="lh-1"><i class="fa-solid fa-check text-success pe-1"></i> Premium Material</p>
+                        <p class="lh-1"><i class="fa-solid fa-check text-success pe-1"></i> Classic & Versatile</p>
+                    </div>
+                    <h3 class="fw-bold">$12</h3>
+                    <p class="text-success py-1 mb-4 px-2 rounded"
+                        style="background-color: #e6e6e6; width: fit-content;">In Stock</p>
+                    <div class="add-cart row p-0 m-0">
+                        <div class="col-3 d-flex justify-content-center rounded" style="background-color: #e6e6e6;">
+                            <button class="btn w-25">-</button>
+                            <input type="text" placeholder="1" class="w-50 text-center btn">
+                            <button class="btn w-25">+</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="w-100 btn btn-dark py-2 text-center">+ ADD TO CART</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="w-100 py-2 btn bg-danger text-white">BUY NOW</button>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap py-3 fs-09 border-bottom">
+                        <a href="#" class="underline-none pe-3 text-secondary"><i class="fa-solid fa-heart"></i> Add to
+                            wishlist</a>
+                        <a href="#" class="underline-none text-secondary"><i class="fa-solid fa-heart"></i> Add to
+                            compare</a>
+                    </div>
+                    <div class="py-3">
+                        <p class="text-secondary">SKU: KGVT48C82S</p>
+                        <p class="text-secondary">SKU: KGVT48C82S</p>
+                    </div>
+                    <div class="d-flex">
+                        <i class="pe-3 text-secondary fa-brands fa-facebook-f"></i>
+                        <i class="pe-3 text-secondary fa-brands fa-pinterest-p"></i>
+                        <i class="pe-3 text-secondary fa-brands fa-x-twitter"></i>
+                        <i class="pe-3 text-secondary fa-brands fa-linkedin-in"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- start earn cash back -->
+    <div class="cash-back row align-items-center justify-content-center p-4 m-4 rounded">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="earn-cash">
+                    <h4 class="fw-bold">Earn Cash Back For The Things You Buy Every Where</h4>
+                    <p class="text-secondary">Application via Merto. <a href="#" class="text-secondary">Terms &
+                            Conditions.</a></p>
+                </div>
+                <div>
+                    <button class="btn bg-success text-white fs-09 fw-bold">VIEW MORE</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+            <img src="./imgs/payments-2-1.png" class="img-fluid" alt="">
+        </div>
+    </div>
+
+    <!-- description -->
+    <div class="description-container pt-4 px-2">
+        <ul class="list-description d-flex flex-wrap pb-3 border-bottom">
+            <li data-target="desc1" class="border-end fw-bold pe-3">Description</li>
+            <li data-target="desc2" class="border-end fw-bold px-3">Specifications</li>
+            <li data-target="desc3" class="border-start fw-bold ps-3">Reviews(0)</li>
+        </ul>
+
+        <div class="descriptions-container pt-4">
+            <div id="desc1" class="description row justify-content-center">
+                <div class="col-lg-5">
+                    <p>
+                        Compellingly grow performance based mindshare through parallel potentialities. Rapidiously
+                        underwhelm top-line catalysts for change before best-of-breed materials. Competently brand
+                        timely catalysts for change through sustainable systems. Completely expedite ubiquitous
+                        bandwidth after integrated action items. Progressively transform leading-edge supply chains
+                        whereas flexible niche markets.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <table class="table table-striped border w-100">
+                        <tbody>
+                            <tr>
+                                <td class="p-3 fs-09 fw-bold">Shipping</td>
+                                <td class="p-3">We currently offer free shipping worldwide on all orders over $100.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 fs-09 fw-bold">Sizing</td>
+                                <td class="p-3">Fits true to size. Do you need size advice?</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 fs-09 fw-bold">Return & exchange</td>
+                                <td class="p-3">If you are not satisfied with your purchase you can return it to us
+                                    within 14 days for an exchange or refund.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 fs-09 fw-bold">Assistance</td>
+                                <td class="p-3">Contact us on (+44) 555 88 65, or email us at support@themesky.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="desc2" class="specification px-5">
+                <table class="table table-striped border w-100">
+                    <tbody>
+                        <tr>
+                            <td class="p-3 fs-09 fw-bold">Fabric Type</td>
+                            <td class="p-3">50% Cotton, 48% Polyester, 2% Spandex</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 fs-09 fw-bold">Sizing</td>
+                            <td class="p-3">Fits true to size. Do you need size advice?</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 fs-09 fw-bold">Return & exchange</td>
+                            <td class="p-3">If you are not satisfied with your purchase you can return it to us within
+                                14 days for an exchange or refund.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 fs-09 fw-bold">Assistance</td>
+                            <td class="p-3">Contact us on (+44) 555 88 65, or email us at support@themesky.com</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 fs-09 fw-bold">Care Instructions</td>
+                            <td class="p-3">Hand Wash Only</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 fs-09 fw-bold">Season</td>
+                            <td class="p-3">Spring,summer and fall</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 fs-09 fw-bold">Assistance</td>
+                            <td class="p-3">0.5 x 0.5 x 0.5 inches</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 fs-09 fw-bold">Dimensions</td>
+                            <td class="p-3">Contact us on (+44) 555 88 65, or email us at support@themesky.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div id="desc3" class="reviews px-lg-5 px-md-3 px-2">
+                <div class="rate d-flex align-items-center">
+                    <div class="pe-lg-4 text-center pe-md-3 px-2">
+                        <h1 class="fs-1 lh-0 fw-bold">0.00</h1>
+                        <p class="text-secondary">Based on 0 reviews</p>
+                    </div>
+                    <div class="rating-review">
+                        <div class="pb-2">
+                            5 <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="pb-2">
+                            4 <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="pb-2">
+                            3 <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="pb-2">
+                            5 <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div>
+                            4 <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="my-5">There are no reviews yet.</p>
+                <div class="review-box border rounded p-4">
+                    <h4><strong>Be the first to review “Barbie Baseball Hat Cap Berkshire Fashions New”</strong></h4>
+                    <p class="pt-4 pb-2">Your email address will not be published. Required fields are marked <span
+                            class="text-danger">*</span></p>
+                    <form>
+                        <div class="mb-3 d-flex">
+                            <label class="form-label pe-2">Your rating <span class="text-danger">*</span></label><br>
+                            <div class="star-rating">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 d-flex flex-wrap">
+                            <label class="form-label pe-3 fs-09">Choose pictures (maxsize: 50KB, max files: 2)</label>
+                            <input type="file">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label class="form-label fw-bold ps-2">Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label class="form-label fw-bold">Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Your review <span class="text-danger">*</span></label>
+                            <textarea class="form-control" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark ms-2 mt-2 px-5 py-2">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- start related products -->
+    <div class="related-products p-4">
+        <h3 class="fw-bold ps-4">Related Products</h3>
+        <div class="flash-deals">
+            <!-- start products -->
+            <div class="carousel-wrapper-container pt-4 d-flex align-items-center position-relative">
+                <button id="prev" class="left-arrow"><i class="fa-solid fa-arrow-left"></i></button>
+                <div
+                    class="carousel-wrapper carousel-wrapper1 d-flex p-0 m-0 align-items-center position-relative w-100 mb-5">
+                    <div class="carousel-container carousel-container-wrapper d-flex p-0 m-0 " id="carousel">
+                        <div class="Card card-wrapper">
+                            <img src="./imgs/fashion-10-1-300x300.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-wrapper">
+                            <img src="./imgs/fashion-10-300x300.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-wrapper">
+                            <div
+                                class="discount position-absolute top-0 left-0 m-2 mt-3 bg-danger text-white p-1 rounded">
+                                HOT</div>
+                            <img src="./imgs/fashion-11-300x300.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-wrapper">
+                            <img src="./imgs/fashion-16-300x300.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-wrapper">
+                            <div
+                                class="discount position-absolute top-0 left-0 m-2 mt-3 bg-danger text-white p-1 rounded">
+                                -40%</div>
+                            <img src="./imgs/fashion-7-300x300.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-wrapper">
+                            <div
+                                class="discount position-absolute top-0 left-0 m-2 mt-3 bg-danger text-white p-1 rounded">
+                                -30%</div>
+                            <img src="./imgs/electronic-14-2-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card position-relative card-wrapper">
+                            <div
+                                class="discount position-absolute top-0 left-0 m-2 mt-3 bg-danger text-white p-1 rounded">
+                                -30%</div>
+                            <img src="./imgs/electronic-30-6-700x700.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="Card card-wrapper">
+                            <div
+                                class="discount position-absolute top-0 left-0 m-2 mt-3 bg-danger text-white p-1 rounded">
+                                -30%</div>
+                            <img src="./imgs/fashion-9-300x300.jpg" class="d-block" alt="">
+                            <a href="#">Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD</a>
+                            <p class="text-secondary"><span class="pe-1 text-dark">$999</span><del>$1536</del></p>
+                            <div class="d-flex">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="next" class="right-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- start footer -->
+    <footer class="bg-dark text-white p-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div>
+                        <img src="./imgs/logo (1).png" class="mb-3" alt="">
+                        <p class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                            29 SE 2nd Ave, Miami Florida 33131, United States
+                        </p>
+                        <p class="text-secondary pb-2">
+                            <i class="fa-solid fa-envelope"></i>
+                            info@example.com
+                        </p>
+                        <h3 class="pb-3">(+92) 3942 7879</h3>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <ul>
+                        <li class="fw-bold pb-3">Shopping</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <ul>
+                        <li class="fw-bold pb-3">Shopping</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                        <li class="pb-2">Wishlist</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <h3 class="pb-4">Let's Keep in touch</h3>
+                    <input type="text" placeholder="Enter your email address"
+                        class="border bg-transparent w-100 rounded p-3 mb-4">
+                    <div class="d-flex">
+                        <i class="pe-3 fs-4 fa-brands fa-facebook-f"></i>
+                        <i class="pe-3 fs-4 fa-brands fa-facebook-messenger"></i>
+                        <i class="pe-3 fs-4 fa-brands fa-x-twitter"></i>
+                        <i class="pe-3 fs-4 fa-brands fa-instagram"></i>
+                        <i class="pe-3 fs-4 fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 my-3 p-4 border align-items-center justify-content-center">
+                <div class="col-lg-4 col-sm-12  pb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="pe-2"><i class="fs-5 fa-solid fa-phone-volume"></i></div>
+                        <div class="lh-1">
+                            <p>We'd Love to hear what you think!</p>
+                            <a href="#" class="text-white">Give Feedback</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 pb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="pe-2"><i class="fs-5 fa-solid fa-phone-volume"></i></div>
+                        <div class="lh-1">
+                            <p>We'd Love to hear what you think!</p>
+                            <a href="#" class="text-white">Give Feedback</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="d-flex align-items-center">
+                        <div class="pe-2"><i class="fs-5 fa-solid fa-phone-volume"></i></div>
+                        <div class="lh-1">
+                            <p>We'd Love to hear what you think!</p>
+                            <a href="#" class="text-white">Give Feedback</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright d-flex flex-wrap pt-4 justify-content-between">
+                <div class="text-secondary pb-2">
+                    Copyright © Merto. All Rights Reserved
+                </div>
+                <div class="payment">
+                    <img src="./imgs/payment-icons-1.png" alt="photo">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/hatCap.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/cardProducts.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

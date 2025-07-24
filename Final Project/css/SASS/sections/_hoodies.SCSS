@@ -1,0 +1,92 @@
+@use "./SASS/helper/variables" as *;
+@use "../css/SASS/helper/mixins" as *;
+
+.hoodies {
+    background-color: $main-bg ;
+    align-items: center;
+
+    .arrow-left,
+    .arrow-right {
+        cursor: pointer;
+    }
+
+    .container {
+        .product {
+            .img-product {
+                img {
+                    height: 42rem;
+                }
+
+                @include TypeMedia(small) {
+                    img {
+                        height: 15rem;
+                    }
+                }
+            }
+
+            .discount-badge {
+                width: 100px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 25%;
+                right: 25%;
+                animation: pulse 2s infinite ease-in-out;
+
+                @include TypeMedia(small) {
+                    & {
+                        width: 40px;
+                        height: 40px;
+
+                        h3 {
+                            font-size: 0.8rem !important;
+                        }
+                    }
+                }
+            }
+
+            .discount-product {
+                img {
+                    width: 50px;
+                }
+
+                @include TypeMedia(small) {
+                    & {
+                        div {
+                            padding: .5rem !important;
+
+                            .buy-now {
+                                button {
+                                    margin-top: 0.8rem !important;
+                                }
+                            }
+
+                            .txt-product {
+                                p {
+                                    font-size: 0.7rem;
+                                }
+
+                                h3 {
+                                    font-size: 0.9rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}

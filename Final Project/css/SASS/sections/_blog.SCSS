@@ -1,0 +1,54 @@
+
+@use "./SASS/helper/variables" as *;
+@use "../css/SASS/helper/mixins" as *;
+
+
+
+.blog {
+    .blog-products {
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        .blog-card {
+            .card {
+                div {
+                    overflow: hidden;
+
+                    .card-img-top {
+                        transition: 0.5s ease-in-out;
+                    }
+
+                    .card-img-top:hover {
+                        transform: rotate(1.2deg) scale(1.1);
+                    }
+                }
+            }
+
+            @include TypeMedia(large) {
+                width: calc(33.333% - 1rem);
+            }
+
+            @include TypeMedia(medium) {
+                width: calc(50% - 1rem);
+            }
+
+            @include TypeMedia(small) {
+                width: calc(100% - 1rem);
+
+                h4 {
+                    font-size: $fs-085;
+                }
+
+                p {
+                    font-size: $fs-07;
+                }
+            }
+
+            flex-shrink: 0;
+        }
+    }
+}

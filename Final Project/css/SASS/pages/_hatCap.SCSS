@@ -1,0 +1,143 @@
+@use "./SASS/helper/variables" as *;
+@use "../css/SASS/helper/mixins" as *;
+
+.cart {
+    opacity: 0;
+
+    @media (max-width:767px) {
+        z-index: 999 !important;
+        opacity: 1;
+    }
+}
+
+.detailsProducts {
+    .image-zoom-container {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+
+        .image-zoom {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+            transform-origin: center center;
+            cursor: zoom-in !important;
+        }
+    }
+
+    .change-zoom-imge {
+        cursor: pointer;
+    }
+
+    .zara-shop {
+        @media (max-width: 767px) {
+            .add-cart {
+                display: none;
+            }
+        }
+    }
+}
+
+.cash-back {
+    background-color: rgb(209, 255, 222);
+
+    .earn-cash {
+        @include TypeMedia(large) {
+            width: 75% !important;
+        }
+    }
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+
+    @include TypeMedia(small) {
+        align-items: center;
+    }
+
+    .list-description {
+        li {
+            cursor: pointer;
+            font-size: 1.5rem;
+
+            @include TypeMedia(medium) {
+                font-size: 1.2rem;
+            }
+
+            @include TypeMedia(small) {
+                font-size: .7rem;
+            }
+
+            @media (max-width:345px) {
+                font-size: 0.63rem !important;
+                padding: 0 0.3rem !important;
+
+                li:first-child {
+                    padding-left: 0 !important;
+                }
+            }
+        }
+    }
+
+    .specification {
+        display: none;
+        table {
+            tr {
+                td {
+                    @include TypeMedia(small) {
+                        font-size: .7rem;
+                    }
+
+                    @media (max-width:345px) {
+                        font-size: 0.62rem !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .reviews {
+        display: none;
+        flex-direction: column;
+        .rate {
+            @include TypeMedia(small) {
+                padding-left: 1.5rem;
+                p {
+                    font-size: 0.7rem !important;
+                }
+            }
+
+        }
+        .rating-review {
+            div {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 300px;
+                    height: 5px;
+                    background-color: $grey-light;
+
+                    @include TypeMedia(small) {
+                        width: 200px;
+                    }
+                    @media (max-width: 467px) {
+                        width: 130px;
+                    }
+                    @media (max-width: 390px) {
+                        width: 90px;
+                    }
+                }
+            }
+        }
+    }
+    .review-box {
+        background-color: $main-bg;
+    }
+}

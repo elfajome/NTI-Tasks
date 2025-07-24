@@ -1,0 +1,130 @@
+[
+    {
+        "id": 1,
+        "title": "Laptop Asus Vivobook 15 1355U, 8GB RAM, 512GB SSD",
+        "image": "./imgs/cosmetics-33-700x700.jpg",
+        "price": 999,
+        "oldPrice": 1536,
+        "rating": 5
+    },
+    {
+        "id": 2,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/cosmetics-33-700x700.jpg",
+        "price": 1200,
+        "oldPrice": 1500,
+        "rating": 5
+    },
+    {
+        "id": 3,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/cosmetics-33-700x700.jpg",
+        "price": 899,
+        "oldPrice": 1100,
+        "rating": 4
+    },
+    {
+        "id": 4,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/cosmetics-33-700x700.jpg",
+        "price": 499,
+        "oldPrice": 599,
+        "rating": 5
+    },
+    {
+        "id": 5,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/cosmetics-40-1-700x700.jpg",
+        "price": 1099,
+        "oldPrice": 1350,
+        "rating": 4
+    },
+    {
+        "id": 6,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/cosmetics-40-1-700x700.jpg",
+        "price": 850,
+        "oldPrice": 999,
+        "rating": 4
+    },
+    {
+        "id": 7,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/cosmetics-40-1-700x700.jpg",
+        "price": 229,
+        "oldPrice": 279,
+        "rating": 5
+    },
+    {
+        "id": 8,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/cosmetics-40-1-700x700.jpg",
+        "price": 299,
+        "oldPrice": 349,
+        "rating": 4
+    },
+    {
+        "id": 9,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/elec-13-700x700.jpg",
+        "price": 59,
+        "oldPrice": 79,
+        "rating": 5
+    },
+    {
+        "id": 10,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/elec-13-700x700.jpg",
+        "price": 49,
+        "oldPrice": 69,
+        "rating": 4
+    },
+    {
+        "id": 11,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/elec-13-700x700.jpg",
+        "price": 599,
+        "oldPrice": 749,
+        "rating": 5
+    },
+    {
+        "id": 12,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/elec-13-700x700.jpg",
+        "price": 699,
+        "oldPrice": 849,
+        "rating": 4
+    },
+    {
+        "id": 13,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/elec-20-700x700.jpg",
+        "price": 399,
+        "oldPrice": 499,
+        "rating": 5
+    },
+    {
+        "id": 14,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/elec-20-700x700.jpg",
+        "price": 349,
+        "oldPrice": 420,
+        "rating": 4
+    },
+    {
+        "id": 15,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/elec-20-700x700.jpg",
+        "price": 950,
+        "oldPrice": 1100,
+        "rating": 5
+    },
+    {
+        "id": 16,
+        "title": "Laptop Asus Vivobook 15 1355U,8GB RAM, 512GB SSD",
+        "image": "./imgs/elec-20-700x700.jpg",
+        "price": 129,
+        "oldPrice": 169,
+        "rating": 4
+    }
+]

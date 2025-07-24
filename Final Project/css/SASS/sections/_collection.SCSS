@@ -1,0 +1,47 @@
+@use "./SASS/helper/variables" as *;
+@use "../css/SASS/helper/mixins" as *;
+.collection {
+    overflow-y: hidden;
+    div {
+        @include TypeMedia(small) {
+            & {
+                margin-bottom: 2rem;
+            }
+        }
+        overflow: hidden;
+        border-radius: 10px;
+        .sec1 {
+            left: 15%;
+        }
+        .sec2 {
+            text-align: center;
+            left: 50% ;
+            transform: translateX(-50%);
+        }
+        .sec3 {
+            left: 12% ;
+        }
+        img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.3s;
+            @include TypeMedia(medium) {
+                & {
+                    height: 250px;
+                }
+            }
+            @include TypeMedia(small) {
+                & {
+                    height: 225px;
+                }
+            }
+            &:hover {
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
