@@ -2,6 +2,11 @@
 
 ---
 
+### Final Project
+https://2u.pw/17fYz
+
+---
+
 ### 1 Session 2 Task Link
 https://2u.pw/hRBu5
 
@@ -34,9 +39,4 @@ https://2u.pw/Z4B3F
 
 ### 7 Session 7 "product page with bootstrap" Task Link
 https://2u.pw/Cuevv
-
----
-
-
-
 
